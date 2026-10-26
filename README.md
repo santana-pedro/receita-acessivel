@@ -46,7 +46,7 @@ GEMINI_API_KEY=sua_chave_aqui
 MAX_FILE_SIZE_MB=10
 ```
 
-Opcionalmente, defina `GEMINI_MODEL` para usar outro modelo (padrão: `gemini-3.8-flash`).
+Opcionalmente, defina `GEMINI_MODEL` para usar outro modelo (padrão: `gemini-3.1-flash-lite`; o `gemini-3.8-flash` tem cota gratuita de só 20 requisições por dia).
 
 ## Como rodar
 

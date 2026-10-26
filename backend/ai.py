@@ -10,7 +10,9 @@ from google.genai import errors, types
 from extractor import Extracted, ExtractionError, ocr_fallback
 from prompts import UNREADABLE_MARKER, build_prompt
 
-DEFAULT_MODEL = "gemini-3.8-flash"
+# Flash-Lite: cota gratuita bem maior que a do gemini-3.8-flash (só 20 requisições
+# por dia) e respostas em ~3 s, com a mesma qualidade nos testes dos dois modos.
+DEFAULT_MODEL = "gemini-3.1-flash-lite"
 
 # Espera (s) após cada tentativa; o último valor não é usado (última tentativa).
 RETRY_DELAYS = (1, 3, 0)
@@ -59,13 +61,16 @@ def translate(item: Extracted, mode: str) -> str:
 
 
 def _call_with_retry(client: genai.Client, model: str, contents):
-    """Repete em sobrecarga temporária (5xx/429), respeitando a meta de < 15 s."""
+    """Repete em sobrecarga temporária (5xx), respeitando a meta de < 15 s.
+
+    Erro 429 (cota) não é repetido: a nova tentativa gastaria mais cota e não
+    resolveria, já que a cota gratuita é por minuto ou por dia.
+    """
     for attempt, delay in enumerate(RETRY_DELAYS):
         try:
             return client.models.generate_content(model=model, contents=contents)
-        except errors.APIError as exc:
-            transient = isinstance(exc, errors.ServerError) or exc.code == 429
-            if not transient or attempt == len(RETRY_DELAYS) - 1:
+        except errors.ServerError:
+            if attempt == len(RETRY_DELAYS) - 1:
                 raise
             time.sleep(delay)
 
