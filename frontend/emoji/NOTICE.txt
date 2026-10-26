@@ -1,0 +1,8 @@
+Banco de imagens do modo Analfabetismo.
+
+- emoji_u*.svg: Noto Emoji (v2026-09-24-unicode18_0), https://github.com/googlefonts/noto-emoji
+  Licença Apache 2.0 (ver LICENSE).
+- hi_*.svg: Health Icons (commit 4e0717e), https://healthicons.org
+  Domínio público (CC0), atribuição não exigida.
+
+Gerado por backend/fetch_emoji.py a partir de backend/symbols.py.

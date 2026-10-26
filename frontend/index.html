@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Receita Acessível</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Receita Acessível</h1>
+    <p>Transforme receitas médicas em instruções fáceis de entender para pacientes com deficiência visual ou que não sabem ler.</p>
+  </header>
+
+  <main class="container">
+    <!-- Etapa 1: envio -->
+    <section id="upload-section">
+      <form id="translate-form" novalidate>
+        <div class="tabs" role="tablist" aria-label="Como enviar a receita">
+          <button type="button" id="tab-file" class="tab" role="tab" data-input="file"
+                  aria-selected="true" aria-controls="panel-file">📄 Enviar arquivo</button>
+          <button type="button" id="tab-text" class="tab" role="tab" data-input="text"
+                  aria-selected="false" aria-controls="panel-text" tabindex="-1">⌨️ Digitar receita</button>
+        </div>
+
+        <div id="panel-file" role="tabpanel" aria-labelledby="tab-file">
+          <label id="dropzone" class="dropzone" for="file-input" tabindex="0">
+            <span class="dropzone-icon" aria-hidden="true">📄</span>
+            <span id="dropzone-text">Arraste a receita aqui ou <strong>clique para selecionar</strong></span>
+            <span class="dropzone-hint">PDF, Word (.docx) ou TXT — até 10 MB</span>
+            <input id="file-input" type="file" accept=".pdf,.docx,.txt" hidden>
+          </label>
+        </div>
+
+        <div id="panel-text" role="tabpanel" aria-labelledby="tab-text" hidden>
+          <label for="text-input" class="text-label">Digite ou cole a receita:</label>
+          <textarea id="text-input" class="text-input" rows="10" maxlength="20000"
+                    placeholder="Ex.: Amoxicilina 500mg — tomar 1 cp VO 8/8h por 7 dias"></textarea>
+        </div>
+
+        <fieldset class="modes">
+          <legend>Para quem é a receita?</legend>
+          <button type="button" class="mode-btn" data-mode="visual" aria-pressed="false">
+            <span aria-hidden="true">👁️</span> Deficiência Visual
+          </button>
+          <button type="button" class="mode-btn" data-mode="illiterate" aria-pressed="false">
+            <span aria-hidden="true">📖</span> Analfabetismo
+          </button>
+        </fieldset>
+
+        <p id="error" class="error" role="alert" hidden></p>
+
+        <button id="translate-btn" type="submit" class="primary-btn" disabled>Traduzir Receita</button>
+      </form>
+    </section>
+
+    <!-- Etapa 2: processando -->
+    <section id="loading-section" class="loading" hidden aria-live="polite">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Analisando a receita...</p>
+    </section>
+
+    <!-- Etapa 3: resultado -->
+    <section id="result-section" hidden>
+      <div id="result" class="result"></div>
+
+      <p id="download-error" class="error" role="alert" hidden></p>
+
+      <div class="downloads">
+        <button type="button" class="download-btn" data-format="pdf">⬇️ Baixar PDF</button>
+        <button type="button" class="download-btn" data-format="docx">⬇️ Baixar Word</button>
+        <button type="button" class="download-btn" data-format="txt">⬇️ Baixar TXT</button>
+      </div>
+
+      <button id="new-btn" type="button" class="primary-btn secondary">Nova Receita</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

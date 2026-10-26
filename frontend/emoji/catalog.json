@@ -1,0 +1,182 @@
+{
+  "🔴": {
+    "file": "emoji_u1f534.svg",
+    "alt": "vermelho"
+  },
+  "🔵": {
+    "file": "emoji_u1f535.svg",
+    "alt": "azul"
+  },
+  "🟢": {
+    "file": "emoji_u1f7e2.svg",
+    "alt": "verde"
+  },
+  "🟡": {
+    "file": "emoji_u1f7e1.svg",
+    "alt": "amarelo"
+  },
+  "🟣": {
+    "file": "emoji_u1f7e3.svg",
+    "alt": "roxo"
+  },
+  "🟠": {
+    "file": "emoji_u1f7e0.svg",
+    "alt": "laranja"
+  },
+  "🟤": {
+    "file": "emoji_u1f7e4.svg",
+    "alt": "marrom"
+  },
+  "⚫": {
+    "file": "emoji_u26ab.svg",
+    "alt": "preto"
+  },
+  "💊": {
+    "file": "emoji_u1f48a.svg",
+    "alt": "comprimido"
+  },
+  "🥄": {
+    "file": "emoji_u1f944.svg",
+    "alt": "colher (xarope/líquido)"
+  },
+  "💧": {
+    "file": "emoji_u1f4a7.svg",
+    "alt": "gotas"
+  },
+  "👃": {
+    "file": "emoji_u1f443.svg",
+    "alt": "nariz (spray nasal)"
+  },
+  "💨": {
+    "file": "emoji_u1f4a8.svg",
+    "alt": "borrifada"
+  },
+  "💉": {
+    "file": "emoji_u1f489.svg",
+    "alt": "injeção"
+  },
+  "🧴": {
+    "file": "emoji_u1f9f4.svg",
+    "alt": "pomada ou creme"
+  },
+  "👁": {
+    "file": "emoji_u1f441.svg",
+    "alt": "olho (colírio)"
+  },
+  "🫁": {
+    "file": "hi_asthma-inhaler.svg",
+    "alt": "bombinha (pulmão)"
+  },
+  "🎯": {
+    "file": "emoji_u1f3af.svg",
+    "alt": "para que serve"
+  },
+  "🤕": {
+    "file": "hi_headache.svg",
+    "alt": "dor"
+  },
+  "🤒": {
+    "file": "hi_chills-fever.svg",
+    "alt": "febre"
+  },
+  "🤧": {
+    "file": "emoji_u1f927.svg",
+    "alt": "alergia ou rinite"
+  },
+  "😷": {
+    "file": "hi_coughing-alt.svg",
+    "alt": "tosse"
+  },
+  "🦠": {
+    "file": "emoji_u1f9a0.svg",
+    "alt": "infecção"
+  },
+  "❤": {
+    "file": "hi_heart-cardiogram.svg",
+    "alt": "pressão ou coração"
+  },
+  "🍬": {
+    "file": "hi_diabetes-measure.svg",
+    "alt": "diabetes"
+  },
+  "🤢": {
+    "file": "hi_nausea.svg",
+    "alt": "enjoo"
+  },
+  "😴": {
+    "file": "emoji_u1f634.svg",
+    "alt": "sono"
+  },
+  "☀": {
+    "file": "emoji_u2600.svg",
+    "alt": "manhã"
+  },
+  "🌤": {
+    "file": "emoji_u1f324.svg",
+    "alt": "tarde"
+  },
+  "🌙": {
+    "file": "emoji_u1f319.svg",
+    "alt": "noite"
+  },
+  "⏰": {
+    "file": "emoji_u23f0.svg",
+    "alt": "horário"
+  },
+  "⏳": {
+    "file": "emoji_u23f3.svg",
+    "alt": "intervalo em horas"
+  },
+  "🗓": {
+    "file": "emoji_u1f5d3.svg",
+    "alt": "dias de tratamento"
+  },
+  "🔁": {
+    "file": "emoji_u1f501.svg",
+    "alt": "repetir"
+  },
+  "♾": {
+    "file": "emoji_u267e.svg",
+    "alt": "sempre (uso contínuo)"
+  },
+  "🆘": {
+    "file": "emoji_u1f198.svg",
+    "alt": "se precisar"
+  },
+  "➡": {
+    "file": "emoji_u27a1.svg",
+    "alt": "então"
+  },
+  "✋": {
+    "file": "emoji_u270b.svg",
+    "alt": "esperar"
+  },
+  "➕": {
+    "file": "emoji_u2795.svg",
+    "alt": "no máximo"
+  },
+  "🍽": {
+    "file": "emoji_u1f37d.svg",
+    "alt": "refeição"
+  },
+  "⬅": {
+    "file": "emoji_u2b05.svg",
+    "alt": "antes"
+  },
+  "🚰": {
+    "file": "emoji_u1f6b0.svg",
+    "alt": "com água"
+  },
+  "🚫": {
+    "file": "emoji_u1f6ab.svg",
+    "alt": "proibido"
+  },
+  "🍺": {
+    "file": "hi_alcohol.svg",
+    "alt": "bebida alcoólica"
+  },
+  "🚗": {
+    "file": "emoji_u1f697.svg",
+    "alt": "dirigir"
+  }
+}
