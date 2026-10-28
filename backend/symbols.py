@@ -55,12 +55,11 @@ SYMBOLS: dict[str, str] = {
     "♾️": "sempre (uso contínuo)",
     # Se precisar
     "🆘": "se precisar",
-    "➡️": "então",
+    "➡️": "e depois",
     "✋": "esperar",
     "➕": "no máximo",
     # Como tomar e avisos
     "🍽️": "refeição",
-    "⬅️": "antes",
     "🚰": "com água",
     "🚫": "proibido",
     "🍺": "bebida alcoólica",

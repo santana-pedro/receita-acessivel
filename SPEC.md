@@ -79,6 +79,8 @@ O usuário escolhe entre duas formas (abas):
      intervalo mínimo de remédio "se precisar" com ✋ ⏳
    - Quantidades: o símbolo é repetido (💊💊 = 2 comprimidos); números só para medidas (💧 40, 🥄 15 ml)
    - O nome do remédio aparece em texto no topo do cartão (não há como convertê-lo em símbolo)
+   - Dose ligada a refeição vira uma sequência lida da esquerda para a direita, sem horário
+     inventado: 🌤️ 🍽️ ➡️ 💊 (depois do almoço), 🌙 💊 ➡️ 🍽️ (antes do jantar), ☀️ 🚫🍽️ 💊 (em jejum)
    - Cada cartão traz somente o que a receita diz sobre aquele remédio: nada é inventado nem
      copiado de outro remédio
    - Layout em "cards" visuais, um por medicamento
@@ -138,7 +140,16 @@ Regras:
      - período: ☀️ manhã (5h–11h) | 🌤️ tarde (12h–17h) | 🌙 noite e madrugada (18h–4h)
      - hora: em números, no formato de 24 horas do celular: 06:00 | 14:00 | 20:00 | 00:00
        (NUNCA use emojis de relógio analógico como 🕗)
-     - sem horário definido (ex.: "tomar de manhã"), use só o período: ☀️ 💊
+     - só use ⏰ quando a receita trouxer um intervalo (8/8h, 12/12h, 1x ao dia) ou um
+       horário escrito. Período sem horário (ex.: "de manhã", "à noite"): use só o período,
+       SEM ⏰ e sem inventar hora: 🌙 💊 | 1 comprimido à noite
+     - dose ligada a uma refeição: NÃO invente horário; use o período da refeição
+       (café da manhã = ☀️ | almoço = 🌤️ | jantar = 🌙) e a ordem dos acontecimentos,
+       lida da esquerda para a direita (➡️ = "e depois"):
+         depois de comer:     🌤️ 🍽️ ➡️ 💊 | 1 comprimido depois do almoço
+         antes de comer:      🌙 💊 ➡️ 🍽️ | 1 comprimido antes do jantar
+         durante a refeição:  ☀️ 🍽️ 💊 | 1 comprimido durante o café da manhã
+         em jejum:            ☀️ 🚫🍽️ 💊 | 1 comprimido em jejum, ao acordar
      - repita o símbolo da forma para a quantidade (até 4): ☀️ ⏰ 08:00 💊💊 = 2 comprimidos às 8h
      - acima de 4, ou em medidas, use número: 💧 40 | 🥄 15 ml | meia dose: ½💊
      - spray em cada narina: 👃💨👃💨
@@ -146,7 +157,7 @@ Regras:
    Só se precisar (SOS), no lugar dos horários: 🆘 [sintoma] ➡️ [dose]
      - intervalo mínimo entre doses SOS: ✋ ⏳ [número de horas] | Esperar pelo menos X horas entre as doses
      - máximo de doses por dia: 🚫 ➕ [número] [forma] | No máximo X por dia
-   Como tomar (se houver): 🍽️⬅️ antes de comer | 🍽️➡️ depois de comer | 🚰 com água
+   Como tomar (se houver): 🚰 com água
    Duração: 🗓️ [número de dias] | uso contínuo: 🔁 ♾️
    Avisos (se houver): 🚫🍺 sem bebida alcoólica | 🚫🚗 não dirigir | 🚫☀️ evitar sol
 4. Cada cartão contém SOMENTE o que a receita diz sobre aquele remédio. Nunca invente nem
@@ -164,6 +175,12 @@ Receita: "Amoxicilina 500mg 1 cp VO 8/8h por 7 dias"
 🌤️ ⏰ 14:00 💊 | 1 comprimido às 2h da tarde
 🌙 ⏰ 22:00 💊 | 1 comprimido às 10h da noite
 🗓️ 7 | Por 7 dias
+
+Receita: "Metformina 850mg 1 cp após almoço e jantar"
+🟢 💊 | Metformina 850 mg
+🎯 🍬 | Para diabetes
+🌤️ 🍽️ ➡️ 💊 | 1 comprimido depois do almoço
+🌙 🍽️ ➡️ 💊 | 1 comprimido depois do jantar
 
 Receita: "Salbutamol aerossol 2 jatos se falta de ar"
 🔵 🫁 | Salbutamol (bombinha)
