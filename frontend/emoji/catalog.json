@@ -65,7 +65,7 @@
   },
   "🫁": {
     "file": "hi_asthma-inhaler.svg",
-    "alt": "bombinha (pulmão)"
+    "alt": "bombinha de asma"
   },
   "🎯": {
     "file": "emoji_u1f3af.svg",
@@ -86,6 +86,10 @@
   "😷": {
     "file": "hi_coughing-alt.svg",
     "alt": "tosse"
+  },
+  "😮‍💨": {
+    "file": "emoji_u1f62e_200d_1f4a8.svg",
+    "alt": "falta de ar"
   },
   "🦠": {
     "file": "emoji_u1f9a0.svg",

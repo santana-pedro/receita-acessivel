@@ -3,11 +3,18 @@
 Aplicação web que traduz receitas médicas para dois públicos:
 
 - **👁️ Deficiência Visual** — texto sem abreviações, em frases curtas, exibido com fonte grande (32px), alto contraste e espaçamento duplo.
-- **📖 Analfabetismo** — receita reescrita em linguagem muito simples, com um cartão por remédio e emojis para cada instrução (💊 ☀️ 🌤️ 🌙 💧 📅).
+- **📖 Analfabetismo** — um cartão por remédio que o paciente entende só pelas imagens: cor para associar à caixa, forma do remédio, para que serve, horários em números (⏰ 08:00), quantidade e duração. Ao lado de cada linha vai um texto curto para o farmacêutico ou o familiar que ajuda o paciente.
 
 O médico envia a receita (PDF, Word ou TXT) ou digita o texto dela, escolhe o modo, e a IA (Google Gemini) gera a versão acessível. O resultado pode ser baixado em **PDF**, **Word (.docx)** ou **TXT**.
 
 Nenhuma receita é armazenada no servidor: todo o processamento é feito em memória.
+
+## ⚠️ Aviso
+
+Este é um **projeto acadêmico**, não um dispositivo médico.
+
+- O texto é gerado por inteligência artificial e **pode conter erros**. Todo resultado deve ser **conferido por um profissional de saúde** contra a receita original antes de ser entregue a um paciente.
+- No plano gratuito da API do Gemini, o Google pode usar o conteúdo enviado para melhorar seus produtos. **Não envie receitas reais** com dados de pacientes nesse plano. Para uso real, utilize o plano pago e observe a LGPD.
 
 ## Pré-requisitos
 
@@ -95,3 +102,7 @@ python fetch_emoji.py
 | `POST` | `/api/translate` | `multipart/form-data` com `file` (PDF, DOCX ou TXT) **ou** `text` (receita digitada), e `mode` (`visual` ou `illiterate`). Retorna `{"translated_text", "mode"}`. |
 | `POST` | `/api/download` | JSON `{"text", "mode", "format"}` (`pdf`, `docx` ou `txt`). Retorna o arquivo. |
 | `GET` | `/health` | Verificação de saúde. |
+
+## Licença
+
+O código está sob a [licença MIT](LICENSE). As imagens em `frontend/emoji/` mantêm as licenças originais: Noto Emoji (Apache 2.0) e Health Icons (domínio público, CC0). Veja `frontend/emoji/NOTICE.txt`.

@@ -29,10 +29,13 @@ Regras:
 3. Para cada medicamento, crie um cartão (uma linha por item), separado dos outros por uma linha em branco:
    Linha 1: [cor] [forma] | [nome do remédio e dosagem]
      - cor: uma cor diferente por remédio, nesta ordem: 🔴 🔵 🟢 🟡 🟣 🟠 🟤 ⚫
-     - forma: 💊 comprimido/cápsula | 🥄 xarope/líquido | 💧 gotas | 👃 spray nasal |
-       💉 injeção | 🧴 pomada/creme | 👁️ colírio | 🫁 bombinha
+     - forma: 💊 comprimido/cápsula | 🥄 xarope/líquido | 💧 gotas | 💉 injeção |
+       🧴 pomada/creme | 👁️ colírio
+       🫁 bombinha de asma: inalador usado PELA BOCA (ex.: salbutamol, Aerolin, fenoterol,
+          "aerossol", "spray oral", "inalação", "bombinha", "puff")
+       👃 spray nasal: SOMENTE quando a receita disser nasal, narina ou nariz
    Linha 2: 🎯 [para que serve, em símbolos] | [para que serve] — ex.: 🤕 dor | 🤒 febre |
-     🤧 alergia/rinite | 😷 tosse | 🦠 infecção | ❤️ pressão/coração | 🍬 diabetes | 🤢 enjoo | 😴 sono
+     🤧 alergia/rinite | 😷 tosse | 😮‍💨 falta de ar/asma | 🦠 infecção | ❤️ pressão/coração | 🍬 diabetes | 🤢 enjoo | 😴 sono
    Intervalo entre doses (se a receita tiver intervalo fixo): ⏳ [número de horas] | De X em X horas
    Uma linha por horário: [período] ⏰ [hora] [dose]
      - período: ☀️ manhã (5h–11h) | 🌤️ tarde (12h–17h) | 🌙 noite e madrugada (18h–4h)
@@ -42,29 +45,33 @@ Regras:
      - repita o símbolo da forma para a quantidade (até 4): ☀️ ⏰ 08:00 💊💊 = 2 comprimidos às 8h
      - acima de 4, ou em medidas, use número: 💧 40 | 🥄 15 ml | meia dose: ½💊
      - spray em cada narina: 👃💨👃💨
+     - jatos da bombinha de asma: repita 🫁 (🫁🫁 = 2 jatos pela boca); nunca use 👃 para ela
    Só se precisar (SOS), no lugar dos horários: 🆘 [sintoma] ➡️ [dose]
      - intervalo mínimo entre doses SOS: ✋ ⏳ [número de horas] | Esperar pelo menos X horas entre as doses
      - máximo de doses por dia: 🚫 ➕ [número] [forma] | No máximo X por dia
    Como tomar (se houver): 🍽️⬅️ antes de comer | 🍽️➡️ depois de comer | 🚰 com água
    Duração: 🗓️ [número de dias] | uso contínuo: 🔁 ♾️
    Avisos (se houver): 🚫🍺 sem bebida alcoólica | 🚫🚗 não dirigir | 🚫☀️ evitar sol
-4. Se não houver informação para uma linha, omita-a
-5. Retorne apenas os cartões, sem explicações adicionais
+4. Cada cartão contém SOMENTE o que a receita diz sobre aquele remédio. Nunca invente nem
+   copie de outro remédio: intervalo, dose máxima, horário, duração, forma de tomar ou aviso
+5. Se não houver informação para uma linha, omita-a
+6. Retorne apenas os cartões, sem explicações adicionais
 
-Exemplos de cartão:
+Exemplos (a linha da receita e o cartão gerado a partir dela):
+
+Receita: "Amoxicilina 500mg 1 cp VO 8/8h por 7 dias"
 🔴 💊 | Amoxicilina 500 mg
 🎯 🦠 | Para infecção
 ⏳ 8 | De 8 em 8 horas
 ☀️ ⏰ 06:00 💊 | 1 comprimido às 6h da manhã
 🌤️ ⏰ 14:00 💊 | 1 comprimido às 2h da tarde
 🌙 ⏰ 22:00 💊 | 1 comprimido às 10h da noite
-🚰 | Tomar com água
 🗓️ 7 | Por 7 dias
 
-🔵 💊 | Dipirona 500 mg
-🎯 🤕 🤒 | Para dor ou febre
-🆘 🤕 🤒 ➡️ 💊 | Se tiver dor ou febre, tomar 1 comprimido
-✋ ⏳ 6 | Esperar pelo menos 6 horas entre as doses
+Receita: "Salbutamol aerossol 2 jatos se falta de ar"
+🔵 🫁 | Salbutamol (bombinha)
+🎯 😮‍💨 | Para falta de ar
+🆘 😮‍💨 ➡️ 🫁🫁 | Se tiver falta de ar, 2 jatos pela boca
 Receita:"""
 
 # Marcador que a IA devolve quando não consegue ler o documento.
